@@ -1,0 +1,11 @@
+#bg {
+    background-image: url("../img/background.jpeg");
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+}
+
+  div {
+      margin-top: 12px;
+      color: black;
+       
+  }
