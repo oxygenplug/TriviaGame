@@ -1,22 +1,26 @@
-document.getElementById('timer').innerHTML = 01  + ":" + 00;
-startTimer();
+$(document).ready(function () {
+  //document.getElementById('timer').innerHTML = setInterval(() => this.clock = Date.now(), 1000);
 
-function startTimer() {
-  var currentTime = document.getElementById('timer').innerHTML;
-  var timeArray = currentTime.split(/[:]+/);
-  var m = timeArray[0];
-  var s = checkSecond((timeArray[1] - 1));
-  if(s==59){m=m-1}
-  //if(m<0){alert('timer completed')}
 
-  document.getElementById('timer').innerHTML =
-    m + ":" + s;
-  setTimeout(startTimer, 1000);
-}
- 
-function checkSecond(sec) {
-  if (sec < 10 && sec >= 0) {sec = "0" + sec}; // add zero in front of numbers < 10
-  if (sec < 0) {sec = "59"};
-  return sec;
-}
- 
+
+  const runTimer = function () {
+    displayTime();
+  };
+
+  var displayTime = function () {
+    var date = new Date();
+    var time = date.toLocaleTimeString();
+    document.getElementById('timer').innerHTML = time;
+
+  };
+  setInterval(runTimer, 1000);
+
+
+  var triviaGame = {
+
+    totalScore: 0,
+    currentScore: 0,
+
+  };
+
+});
