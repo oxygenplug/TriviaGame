@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //document.getElementById('timer').innerHTML = setInterval(() => this.clock = Date.now(), 1000);
   // gives the user one minute to complete the quiz
-  var timeLeft = 7;
+  var timeLeft = 3;
   const runTimer = function () {
     // first checks to see the timer hasn't already expird before running the function again
     if (timeLeft >= 0) {
