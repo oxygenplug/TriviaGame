@@ -1,7 +1,7 @@
 $(document).ready(function () {
   //document.getElementById('timer').innerHTML = setInterval(() => this.clock = Date.now(), 1000);
   // gives the user one minute to complete the quiz
-  var timeLeft = 3;
+  var timeLeft = 60;
   const runTimer = function () {
     // first checks to see the timer hasn't already expird before running the function again
     if (timeLeft >= 0) {
@@ -49,16 +49,15 @@ $(document).ready(function () {
   // when a button with the wrong class gets clicked, it calls the corresponding function  
   $('.wrong').on('click', selectWrongAnswer);
 
-  $('#submit').filter(':button').on('click', function () {
-    console.log('Hello');
-  });
+  $('#submit').on('click', endGame);
   //logic for ending the game including checking to see if the timer has hit zero
-  var endGame = function () {
-    if (timeLeft === 0) {
-      $('#gameRunning').addClass('hide');
-      $('#gosSplash').removeClass('hide').fadeIn();
-      $('#gosCorrect').text('You got: ' + totalScore + ' right.')
-      $('#gosWrong').text('You got ' + totalWrong + ' wrong.')
-    };
+   function endGame () {
+
+    $('#gameRunning').addClass('hide');
+    $('#gosSplash').removeClass('hide').fadeIn();
+    $('#gosCorrect').text('You got: ' + totalScore + ' right.')
+    $('#gosWrong').text('You got ' + totalWrong + ' wrong.')
+    console.log('game has ended');
+
   };
 });
