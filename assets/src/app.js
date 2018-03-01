@@ -24,7 +24,7 @@ $(document).ready(function () {
   // runs the timer every second
   setInterval(runTimer, 1000);
   // keeps track of the finishing score
-  var totalScore = 0;
+  var totalGuessed = 0;
   // keeps track of the current score the user has
   var currentScore = 0;
   // keeps track of how many wrong guesses the user had
@@ -33,11 +33,13 @@ $(document).ready(function () {
   // runs whenver a radio button with the correct class gets selceted 
   var selectCorrectAnswer = function () {
     currentScore = currentScore + 1;
+    totalGuessed = totalGuessed + 1;
     console.log("The total correct is currently " + currentScore);
   };
   // runs wheneve a radio button with the incorrect class gets selected
   var selectWrongAnswer = function () {
     totalWrong = totalWrong + 1;
+    totalGuessed = totalGuessed + 1;
     console.log("The total wrong is currently " + totalWrong);
   };
 
@@ -50,9 +52,10 @@ $(document).ready(function () {
   //logic for ending the game including checking to see if the timer has hit zero
 var endGame = function () {
   if (timeLeft === 0) {
-
+    alert('Game Over! You got ' + totalScore + 'right. You got ' +  totalWrong + 'wrong.');
   };
 };
 
+endGame();
 
 });
