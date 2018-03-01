@@ -11,6 +11,7 @@ $(document).ready(function () {
       timeLeft = timeLeft - 1;
       //backs out of functions if timer hits 0 while running
       if (timeLeft === 0) {
+        endGame();
         return;
       }
     }
@@ -26,15 +27,15 @@ $(document).ready(function () {
   // keeps track of the finishing score
   var totalGuessed = 0;
   // keeps track of the current score the user has
-  var currentScore = 0;
+  var totalScore = 0;
   // keeps track of how many wrong guesses the user had
   var totalWrong = 0;
 
-  // runs whenver a radio button with the correct class gets selceted 
+  // runs whenever a radio button with the correct class gets selceted 
   var selectCorrectAnswer = function () {
-    currentScore = currentScore + 1;
+    totalScore = totalScore + 1;
     totalGuessed = totalGuessed + 1;
-    console.log("The total correct is currently " + currentScore);
+    console.log("The total correct is currently " + totalScore);
   };
   // runs wheneve a radio button with the incorrect class gets selected
   var selectWrongAnswer = function () {
@@ -45,17 +46,19 @@ $(document).ready(function () {
 
   // when a button with the correct class gets clicked, it calls the corresponding function 
   $('.correct').on('click', selectCorrectAnswer);
-  // when a button with the wrong class gets clicked, it calls the corresponding function 
+  // when a button with the wrong class gets clicked, it calls the corresponding function  
   $('.wrong').on('click', selectWrongAnswer);
 
-
+  $('#submit').filter(':button').on('click', function () {
+    console.log('Hello');
+  });
   //logic for ending the game including checking to see if the timer has hit zero
 var endGame = function () {
   if (timeLeft === 0) {
-    alert('Game Over! You got ' + totalScore + 'right. You got ' +  totalWrong + 'wrong.');
+    $('#gameRunning').addClass('hide');
+    $('#gameOverScreen').removeClass('hide').fadeIn();
+    alert('Game Over! You got ' + totalScore + ' right. You got ' +  totalWrong + ' wrong.');
+    
   };
 };
-
-endGame();
-
 });

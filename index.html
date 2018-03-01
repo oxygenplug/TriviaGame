@@ -8,128 +8,140 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
                 crossorigin="anonymous">
         <link rel="stylesheet" href="assets/css/style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="assets/src/app.js"></script>
         <title>H O M E</title>
-      
+
 </head>
-  
+
 <body>
         <div class="container-fluid" id="bg">
-        <div class="container text-center bg-light">
-                <div class="jumbotron-fluid text-center bg-dark text-white">
-                        <h1>Movie Trivia!</h1>
-                        <div class="container bg-dark text-white" id="timerContainer">
-                                <h1 id="timer">
+                <div class="container text-center bg-light" id="gameRunning">
+                        <div class="jumbotron-fluid text-center bg-dark text-white">
+                                <h1>Movie Trivia!</h1>
+                                <div class="container bg-dark text-white" id="timerContainer">
+                                        <h1 id="timer">
 
-                                </h1>
+                                        </h1>
+                                </div>
+                        </div>
+                        <div class="container" id="firstQ">
+                                <h3>Who plays John McLane in the movie series Die Hard? </h3>
+                        </div>
+                        <div class="containter" id="firstA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> John McClane
+                                        <input type="radio" name="choice" class="correct"> Bruce Willis
+                                        <input type="radio" name="choice" class="wrong"> Alan Rickman
+                                </form>
+                        </div>
+                        <div class="container" id="secondQ">
+                                <h3> Which of these directors have NOT directed a sci-fi movie?</h3>
+                        </div>
+                        <div class="container" id="secondA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> Stanley Kubrick
+                                        <input type="radio" name="choice" class="wrong"> Ridley Scott
+                                        <input type="radio" name="choice" class="correct"> Martin Scorsese
+                                </form>
+                        </div>
+                        <div class="container" id="thirdQ">
+                                <h3>Where did Harry Potter get his wand?</h3>
+                        </div>
+                        <div class="container" id="thirdA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="correct"> Ollivander's
+                                        <input type="radio" name="choice" class="wrong"> Isolt & Sayre
+                                        <input type="radio" name="choice" class="wrong"> The Incantatem
+                                </form>
+                        </div>
+                        <div class="container" id="fourthQ">
+                                <h3>What is the name of the cursed doll from the "Conjuring" Series?</h3>
+                        </div>
+                        <div class="container" id="fourthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="correct"> Anabelle
+                                        <input type="radio" name="choice" class="wrong"> Ana Marie
+                                        <input type="radio" name="choice" class="wrong"> Elizabeth
+                                </form>
+                        </div>
+                        <div class="containter" id="fifthQ">
+                                <h3>Who composed the score for "Tarzan" (1999)?</h3>
+                        </div>
+                        <div class="container" id="fifthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> Celine Dion
+                                        <input type="radio" name="choice" class="correct"> Phil Collins
+                                        <input type="radio" name="choice" class="wrong"> Hans Zimmer
+                                </form>
+                        </div>
+                        <div class="container" id="sixthQ">
+                                <h3>What animal did Steve Carrell's character use to portray works of art in the movie "Dinner
+                                        For Schmucks"?
+                                </h3>
+                        </div>
+                        <div class="container" id="sixthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="correct"> Mice
+                                        <input type="radio" name="choice" class="wrong"> Hamsters
+                                        <input type="radio" name="choice" class="wrong"> Guinea Pigs
+                                </form>
+                        </div>
+                        <div class="container" id="seventhQ">
+                                <h3>Who did Andy Serkis portray in the "Lord of the Rings" Trilogy?</h3>
+                        </div>
+                        <div class="container" id="seventhA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> Samwise
+                                        <input type="radio" name="choice" class="correct"> Gollum
+                                        <input type="radio" name="choice" class="wrong"> Aragorn
+                                </form>
+                        </div>
+                        <div class="container" id="eightQ">
+                                <h3>Which of these films was NOT directed by Christopher Nolan?</h3>
+                        </div>
+                        <div class="container" id="eighthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> The Prestige
+                                        <input type="radio" name="choice" class="wrong"> The Machinist
+                                        <input type="radio" name="choice" class="correct"> The Others
+                                </form>
+                        </div>
+                        <div class="container" id="ninthQ">
+                                <h3>Which actors protrayed the titular stepbrothers in the movie "Stepbrothers"? </h3>
+                        </div>
+                        <div class="container" id="ninthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="wrong"> Will Arnett & Will Farrell
+                                        <input type="radio" name="choice" class="wrong"> Will Smith & John Stamos
+                                        <input type="radio" name="choice" class="correct"> Will Farrell & John C Reilly
+                                </form>
+                        </div>
+                        <div class="container" id="tenthQ">
+                                <h3>Which movie provided Brendan Fraser with his breakout role?</h3>
+                        </div>
+                        <div class="container" id="tenthA">
+                                <form action="">
+                                        <input type="radio" name="choice" class="correct"> Encino Man
+                                        <input type="radio" name="choice" class="wrong"> The Mummy
+                                        <input type="radio" name="choice" class="wrong"> George of the Jungle
+                                </form>
+                        </div>
+                        <div class="container" id="submitContainer">
+                                <button type="button" class="btn btn-success" id="submit">Submit</button>
                         </div>
                 </div>
-                <div class="container" id="firstQ">
-                        <h3>Who plays John McLane in the movie series Die Hard? </h3>
+                <div class="container-fluid bg-success hide" id="gameOverScreen">
+                        <div class="jumbotron text-center">
+                                        <h1>Time's up!</h1>
+                                        <h1 id="gameOverMessage"> </h1>
+
+                                </div>
+
+                        </div>
                 </div>
-                <div class="containter" id="firstA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> John McClane
-                                <input type="radio" name="choice" class="correct"> Bruce Willis
-                                <input type="radio" name="choice" class="wrong"> Alan Rickman
-                        </form>
-                </div>
-                <div class="container" id="secondQ">
-                        <h3> Which of these directors have NOT directed a sci-fi movie?</h3>
-                </div>
-                <div class="container" id="secondA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> Stanley Kubrick
-                                <input type="radio" name="choice" class="wrong"> Ridley Scott
-                                <input type="radio" name="choice" class="correct"> Martin Scorsese
-                        </form>
-                </div>
-                <div class="container" id="thirdQ">
-                        <h3>Where did Harry Potter get his wand?</h3>
-                </div>
-                <div class="container" id="thirdA">
-                        <form action="">
-                                <input type="radio" name="choice" class="correct"> Ollivander's
-                                <input type="radio" name="choice" class="wrong"> Isolt & Sayre
-                                <input type="radio" name="choice" class="wrong"> The Incantatem
-                        </form>
-                </div>
-                <div class="container" id="fourthQ">
-                        <h3>What is the name of the cursed doll from the "Conjuring" Series?</h3>
-                </div>
-                <div class="container" id="fourthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="correct"> Anabelle
-                                <input type="radio" name="choice" class="wrong"> Ana Marie
-                                <input type="radio" name="choice" class="wrong"> Elizabeth
-                        </form>
-                </div>
-                <div class="containter" id="fifthQ">
-                        <h3>Who composed the score for "Tarzan" (1999)?</h3>
-                </div>
-                <div class="container" id="fifthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> Celine Dion
-                                <input type="radio" name="choice" class="correct"> Phil Collins
-                                <input type="radio" name="choice" class="wrong"> Hans Zimmer
-                        </form>
-                </div>
-                <div class="container" id="sixthQ">
-                        <h3>What animal did Steve Carrell's character use to portray works of art in the movie "Dinner For Schmucks"?
-                                </h3>
-                </div>
-                <div class="container" id="sixthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="correct"> Mice
-                                <input type="radio" name="choice" class="wrong"> Hamsters
-                                <input type="radio" name="choice" class="wrong"> Guinea Pigs
-                        </form>
-                </div>
-                <div class="container" id="seventhQ">
-                        <h3>Who did Andy Serkis portray in the "Lord of the Rings" Trilogy?</h3>
-                </div>
-                <div class="container" id="seventhA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> Samwise
-                                <input type="radio" name="choice" class="correct"> Gollum
-                                <input type="radio" name="choice" class="wrong"> Aragorn
-                        </form>
-                </div>
-                <div class="container" id="eightQ">
-                        <h3>Which of these films was NOT directed by Christopher Nolan?</h3>
-                </div>
-                <div class="container" id="eighthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> The Prestige
-                                <input type="radio" name="choice" class="wrong"> The Machinist
-                                <input type="radio" name="choice" class="correct"> The Others
-                        </form>
-                </div>
-                <div class="container" id="ninthQ">
-                        <h3>Which actors protrayed the titular stepbrothers in the movie "Stepbrothers"? </h3>
-                </div>
-                <div class="container" id="ninthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="wrong"> Will Arnett & Will Farrell
-                                <input type="radio" name="choice" class="wrong"> Will Smith & John Stamos
-                                <input type="radio" name="choice" class="correct"> Will Farrell & John C Reilly
-                        </form>
-                </div>
-                <div class="container" id="tenthQ">
-                        <h3>Which movie provided Brendan Fraser with his breakout role?</h3>
-                </div>
-                <div class="container" id="tenthA">
-                        <form action="">
-                                <input type="radio" name="choice" class="correct"> Encino Man
-                                <input type="radio" name="choice" class="wrong"> The Mummy
-                                <input type="radio" name="choice" class="wrong"> George of the Jungle
-                        </form>
-                </div>
-                <div class="container" id="submitContainer"><button type="button" class="btn btn-success">Submit</button></div>
         </div>
-        </div>
-        
+
 </body>
 
 </html>
