@@ -31,6 +31,7 @@ $(document).ready(function () {
   // keeps track of how many wrong guesses the user had
   var totalWrong = 0;
 
+  var unanswered = 10 - totalGuessed;
   // runs whenever a radio button with the correct class gets selceted 
   var selectCorrectAnswer = function () {
     totalScore = totalScore + 1;
@@ -57,6 +58,7 @@ $(document).ready(function () {
     $('#gosSplash').removeClass('hide').fadeIn();
     $('#gosCorrect').text('You got: ' + totalScore + ' right.')
     $('#gosWrong').text('You got ' + totalWrong + ' wrong.')
+    $('#gosTotal').text('You answered ' + totalGuessed + ' out of 10.')
     console.log('game has ended');
 
   };
